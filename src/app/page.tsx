@@ -148,7 +148,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-800 border-t border-gray-700 py-8">
-        <div className="max-w-6xl mx-auto px-4 text-center text-gray-400">
+        <div className="max-w-6xl mx-auto px-4 text-center text-gray-500 dark:text-gray-400">
           <p className="mb-2">BlueCollar.ai — AI coaching for tradespeople</p>
           <p className="text-sm">© 2024 BlueCollar.ai. Built for the working class.</p>
         </div>
@@ -162,7 +162,7 @@ function Feature({ icon, title, description }: { icon: string; title: string; de
     <div className="bg-gray-800 rounded-xl p-6">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-400">{description}</p>
+      <p className="text-gray-500 dark:text-gray-400">{description}</p>
     </div>
   )
 }
@@ -195,7 +195,7 @@ function PricingCard({ title, price, description, features, popular }: {
       )}
       <h3 className="text-xl font-semibold text-white mt-1">{title}</h3>
       <p className="text-gray-400 text-sm mb-4">{description}</p>
-      <p className="text-3xl font-bold text-white mb-4">{price}<span className="text-lg text-gray-400">/mo</span></p>
+      <p className="text-3xl font-bold text-white mb-4">{price}<span className="text-lg text-gray-500 dark:text-gray-400">/mo</span></p>
       <ul className="space-y-2">
         {features.map((feature, idx) => (
           <li key={idx} className="text-gray-300 text-sm">✓ {feature}</li>

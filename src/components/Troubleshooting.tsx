@@ -118,7 +118,7 @@ export default function Troubleshooting({ trade }: TroubleshootingProps) {
           {/* Confidence */}
           <div className="bg-gray-800 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-gray-400">Confidence Level</span>
+              <span className="text-gray-500 dark:text-gray-400">Confidence Level</span>
               <span className="text-2xl font-bold text-white">{diagnosis.confidence}%</span>
             </div>
             <div className="w-full bg-gray-700 rounded-full h-3">
@@ -275,7 +275,7 @@ export default function Troubleshooting({ trade }: TroubleshootingProps) {
       {/* Header */}
       <div className="p-4 bg-gray-800 border-b border-gray-700">
         <h2 className="text-lg font-semibold text-white">Troubleshooting Wizard</h2>
-        <p className="text-sm text-gray-400">Describe your problem and get instant diagnosis</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">Describe your problem and get instant diagnosis</p>
       </div>
 
       <div className="flex-1 overflow-y-auto p-4">

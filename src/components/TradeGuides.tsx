@@ -107,13 +107,13 @@ export default function TradeGuides({ trade }: TradeGuidesProps) {
             ← Back to guides
           </button>
           <h2 className="text-xl font-bold text-white">{selectedGuide}</h2>
-          <p className="text-sm text-gray-400">Estimated time: {guideContent.timeEstimate}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Estimated time: {guideContent.timeEstimate}</p>
         </div>
 
         {/* Current Step */}
         <div className="flex-1 overflow-y-auto p-6">
           {loading ? (
-            <div className="text-center text-gray-400">Loading guide...</div>
+            <div className="text-center text-gray-500 dark:text-gray-400">Loading guide...</div>
           ) : (
             <>
               <div className="mb-4">
@@ -203,7 +203,7 @@ export default function TradeGuides({ trade }: TradeGuidesProps) {
     <div className="h-full bg-gray-900 rounded-lg overflow-hidden">
       <div className="p-4 bg-gray-800 border-b border-gray-700">
         <h2 className="text-lg font-semibold text-white">Trade Guides</h2>
-        <p className="text-sm text-gray-400">Step-by-step instructions for common tasks</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">Step-by-step instructions for common tasks</p>
       </div>
       
       <div className="p-4 space-y-3 overflow-y-auto max-h-[calc(100vh-200px)]">

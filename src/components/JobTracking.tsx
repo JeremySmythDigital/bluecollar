@@ -82,7 +82,7 @@ export default function JobTracking({ trade }: JobTrackingProps) {
       <div className="p-4 bg-gray-800 border-b border-gray-700 flex justify-between items-center">
         <div>
           <h2 className="text-lg font-semibold text-white">Job Tracker</h2>
-          <p className="text-sm text-gray-400">Log and track your work</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Log and track your work</p>
         </div>
         <button
           onClick={() => setShowNewJob(true)}
@@ -143,7 +143,7 @@ export default function JobTracking({ trade }: JobTrackingProps) {
       {/* Jobs List */}
       <div className="flex-1 overflow-y-auto p-4 space-y-6">
         {loading ? (
-          <div className="text-center text-gray-400">Loading jobs...</div>
+          <div className="text-center text-gray-500 dark:text-gray-400">Loading jobs...</div>
         ) : (
           <>
             {/* In Progress */}

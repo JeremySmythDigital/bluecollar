@@ -26,7 +26,7 @@ export default function App() {
       <header className="bg-gray-800 border-b border-gray-700 px-4 py-3">
         <div className="flex justify-between items-center mb-3">
           <h1 className="text-xl font-bold text-white">BlueCollar.ai</h1>
-          <div className="text-sm text-gray-400">
+          <div className="text-sm text-gray-500 dark:text-gray-400">
             <select
               value={trade}
               onChange={(e) => setTrade(e.target.value as Trade)}
