@@ -9,25 +9,25 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI That Works
-              <span className="block text-blue-400">While You Work</span>
+              Professional Blue-Collar Services
+              <span className="block text-blue-400">Reliable. Skilled. On-Time.</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-              Voice-first AI coaching for plumbers, electricians, mechanics, and HVAC techs. 
-              Get on-the-job guidance, troubleshooting help, and skill building — hands-free.
+              Connecting homeowners and businesses with top-rated professionals for HVAC, plumbing, electrical, landscaping, and more. 
+              Quality workmanship guaranteed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/app"
+                href="/services"
                 className="px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-500 transition-colors"
               >
-                Start Free
+                Browse Services
               </Link>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="px-8 py-4 bg-gray-700 text-white text-lg font-semibold rounded-lg hover:bg-gray-600 transition-colors"
               >
-                View Plans
+                Get a Quote
               </Link>
             </div>
           </div>
@@ -37,93 +37,103 @@ export default function Home() {
       {/* Features */}
       <div className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-white text-center mb-12">
-          Built for the Jobsite
+          Why Choose Us
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <Feature
-            icon="🎤"
-            title="Voice-First"
-            description="Talk while you work. Ask questions, get answers — hands stay on the tools."
+            icon="👷"
+            title="Licensed Professionals"
+            description="All our service providers are licensed, insured, and background-checked for your peace of mind."
           />
           <Feature
-            icon="📚"
-            title="Trade Guides"
-            description="Step-by-step instructions for common tasks. Like having a journeyman in your pocket."
+            icon="⏱️"
+            title="Fast Response"
+            description="Get same-day or next-day service appointments. We understand emergencies can't wait."
           />
           <Feature
-            icon="🔧"
-            title="Troubleshooting"
-            description="Describe the problem, get instant diagnosis. AI-powered problem solving."
+            icon="💰"
+            title="Transparent Pricing"
+            description="Upfront, competitive pricing with no hidden fees. Know the cost before work begins."
           />
           <Feature
-            icon="📋"
-            title="Job Tracking"
-            description="Log completed jobs, track your work history. Build your professional record."
+            icon="🛡️"
+            title="Satisfaction Guaranteed"
+            description="We stand behind our work with a 100% satisfaction guarantee on all services."
           />
         </div>
       </div>
 
-      {/* Trades */}
+      {/* Services */}
       <div className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-white text-center mb-12">
-          For Every Trade
+          Our Services
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <TradeCard
-            icon="🔧"
-            title="Plumbing"
-            features={['Pipe systems', 'Fixtures', 'Drains', 'Water heaters']}
+          <ServiceCard
+            icon="❄️"
+            title="HVAC Services"
+            description="Installation, repair, and maintenance of heating, ventilation, and air conditioning systems."
           />
-          <TradeCard
+          <ServiceCard
+            icon="🚰"
+            title="Plumbing"
+            description="From leak repairs to full bathroom remodels, our expert plumbers handle it all."
+          />
+          <ServiceCard
             icon="⚡"
             title="Electrical"
-            features={['Circuits', 'Wiring', 'Panels', 'Outlets']}
+            description="Licensed electricians for wiring, panel upgrades, lighting, and electrical repairs."
           />
-          <TradeCard
-            icon="🔩"
-            title="Mechanical"
-            features={['Engines', 'Transmissions', 'Brakes', 'Suspension']}
-          />
-          <TradeCard
-            icon="❄️"
-            title="HVAC"
-            features={['Furnaces', 'AC units', 'Heat pumps', 'Ductwork']}
+          <ServiceCard
+            icon="🌳"
+            title="Landscaping"
+            description="Lawn care, tree services, hardscaping, and landscape design and maintenance."
           />
         </div>
       </div>
 
-      {/* Pricing Preview */}
+      {/* About Us */}
       <div className="bg-gray-800 py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-4">
-            Simple Pricing
-          </h2>
-          <p className="text-gray-400 text-center mb-12">
-            Start free, upgrade when you need more
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <PricingCard
-              title="Free"
-              price="$0"
-              description="Get started"
-              features={['5 queries/day', 'Basic guides', 'Limited jobs']}
-            />
-            <PricingCard
-              title="Pro"
-              price="$19"
-              description="Working professionals"
-              features={['Unlimited queries', 'All guides', 'Job tracking', 'Voice mode', 'Priority support']}
-              popular
-            />
-            <PricingCard
-              title="Team"
-              price="$49"
-              description="Crews and shops"
-              features={['Everything in Pro', 'Team collaboration', 'Admin dashboard', 'API access']}
-            />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">About BlueCollar Services</h2>
+              <p className="text-gray-300 mb-4">
+                Founded in 2020, BlueCollar Services has been connecting skilled tradespeople with customers who need quality work done right. Our network includes hundreds of licensed professionals across multiple trades, all committed to excellence and customer satisfaction.
+              </p>
+              <p className="text-gray-300 mb-6">
+                We believe in the dignity of hard work and the value of skilled craftsmanship. That's why we've built a platform that makes it easy for homeowners and businesses to find reliable, professional service providers they can trust.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition-colors"
+              >
+                Learn More About Us
+              </Link>
+            </div>
+            <div className="bg-gray-700 rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Our Commitment</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <span className="text-gray-300">Quality workmanship on every job</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <span className="text-gray-300">Fair and transparent pricing</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <span className="text-gray-300">Prompt and reliable service</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <span className="text-gray-300">Exceptional customer service</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -132,25 +142,64 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-4 py-24">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Work Smarter?
+            Need Professional Help?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of tradespeople getting AI-powered help on every job.
+            Whether it's an emergency repair or a planned project, our network of skilled professionals is ready to help.
           </p>
-          <Link
-            href="/app"
-            className="inline-block px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-500 transition-colors"
-          >
-            Get Started Free
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/services"
+              className="inline-block px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-500 transition-colors"
+            >
+              View All Services
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-4 bg-gray-700 text-white text-lg font-semibold rounded-lg hover:bg-gray-600 transition-colors"
+            >
+              Contact Us Today
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Footer */}
       <footer className="bg-gray-800 border-t border-gray-700 py-8">
-        <div className="max-w-6xl mx-auto px-4 text-center text-gray-500 dark:text-gray-400">
-          <p className="mb-2">BlueCollar.ai — AI coaching for tradespeople</p>
-          <p className="text-sm">© 2024 BlueCollar.ai. Built for the working class.</p>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-6">
+            <div>
+              <h3 className="text-white font-semibold mb-4">BlueCollar Services</h3>
+              <p className="text-gray-400 text-sm">Connecting you with skilled professionals for all your home and business service needs.</p>
+            </div>
+            <div>
+              <h4 className="text-white font-medium mb-3">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link href="/services" className="text-gray-400 hover:text-white text-sm">Services</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm">Contact</Link></li>
+                <li><Link href="/pricing" className="text-gray-400 hover:text-white text-sm">Pricing</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-medium mb-3">Services</h4>
+              <ul className="space-y-2">
+                <li><Link href="/services#hvac" className="text-gray-400 hover:text-white text-sm">HVAC</Link></li>
+                <li><Link href="/services#plumbing" className="text-gray-400 hover:text-white text-sm">Plumbing</Link></li>
+                <li><Link href="/services#electrical" className="text-gray-400 hover:text-white text-sm">Electrical</Link></li>
+                <li><Link href="/services#landscaping" className="text-gray-400 hover:text-white text-sm">Landscaping</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-medium mb-3">Contact</h4>
+              <p className="text-gray-400 text-sm">📞 (555) 123-4567</p>
+              <p className="text-gray-400 text-sm">✉️ info@bluecollar.services</p>
+              <p className="text-gray-400 text-sm">📍 Serving nationwide</p>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 pt-6 text-center text-gray-500 dark:text-gray-400">
+            <p className="mb-2">BlueCollar Services — Quality workmanship you can trust</p>
+            <p className="text-sm">© 2024 BlueCollar Services. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
@@ -167,16 +216,12 @@ function Feature({ icon, title, description }: { icon: string; title: string; de
   )
 }
 
-function TradeCard({ icon, title, features }: { icon: string; title: string; features: string[] }) {
+function ServiceCard({ icon, title, description }: { icon: string; title: string; description: string }) {
   return (
     <div className="bg-gray-800 rounded-xl p-6">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <ul className="space-y-1">
-        {features.map((feature, idx) => (
-          <li key={idx} className="text-gray-400 text-sm">• {feature}</li>
-        ))}
-      </ul>
+      <p className="text-gray-400 text-sm">{description}</p>
     </div>
   )
 }
