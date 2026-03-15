@@ -1,17 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 
+// Check if Stripe is configured
+export const isStripeConfigured = !!process.env.STRIPE_SECRET_KEY
+
 // Lazy-initialize Stripe only when needed
 function getStripe() {
   const key = process.env.STRIPE_SECRET_KEY
   if (!key) {
-    throw new Error('STRIPE_SECRET_KEY is not configured')
+    return null
   }
   return new Stripe(key)
 }
 
 export async function POST(request: NextRequest) {
   try {
+    // Graceful error if Stripe not configured
+    if (!isStripeConfigured) {
+      return NextResponse.json({ 
+        error: 'Payment processing not configured. Please contact support.',
+        configured: false 
+      }, { status: 503 })
+    }
+
     const { planId } = await request.json()
 
     if (!planId) {
@@ -19,6 +30,9 @@ export async function POST(request: NextRequest) {
     }
 
     const stripe = getStripe()
+    if (!stripe) {
+      return NextResponse.json({ error: 'Payment processing unavailable' }, { status: 503 })
+    }
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',

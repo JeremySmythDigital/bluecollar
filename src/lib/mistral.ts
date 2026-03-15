@@ -1,6 +1,9 @@
 import { mistral } from '@ai-sdk/mistral'
 import { generateText } from 'ai'
 
+// Check if Mistral is configured
+export const isMistralConfigured = !!process.env.MISTRAL_API_KEY
+
 export interface ChatMessage {
   role: 'user' | 'assistant' | 'system'
   content: string
